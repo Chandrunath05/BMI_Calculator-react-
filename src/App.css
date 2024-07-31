@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    font-family: "Roboto Condensed", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    width: 100vh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #535c68;
+    transform: translatex(60%);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.bmi-container{
+       width: 800px;
+       height: 500px; 
+       background: white;
+       padding: 20px;
+       border-radius: 10px;
+       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+       display:flex;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.box{
+    width: 350px;
+    background-image: url("assets/bmi-image.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
 }
-
-.App-link {
-  color: #61dafb;
+.data{
+    flex:1;
+    padding: 20px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1{
+    font-weight: 500;
+    margin-bottom: 20px;
+    padding: 10px ,0;
+    font-size: 25px;
+    font-family: Condensed, cursive;
+    text-transform: uppercase;
+    color:#2989b9
+}
+.input-container{
+    margin-bottom: 15px;
+}
+label{
+    display: block;
+    margin-bottom: 10px;
+    color: #888;
+}
+input{
+    width:100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+button{
+    background-color: #3498db;
+    color: #fff;
+    border:none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor:pointer;
+    transition: background-color 0.3s;
+}
+button:hover{
+    background-color: #2980b9;
+}
+.data button:nth-of-type(2){
+    background-color:rgba(240,36,36);
+    margin-left: 10px;
+}
+.data button:nth-of-type(2):hover{
+      background-color: rgba(198,38,30);
+}
+.result{
+    margin-top: 20px;
+    padding: 10px;
+    border:1px solid #3498db;
+    border-radius: 7px;
+}
+.result p{
+     margin: 10px 0;
+     color: #555;
+}
+.result p:first-child{
+    color:#3498db;
+    font-weight: bold;
+}
+.error{
+    color:red;
+    font-size: 14px;
+    margin-bottom: 10px;
 }
